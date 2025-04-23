@@ -20,14 +20,12 @@
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, Material-UI, Tailwind CSS
+- **Frontend**: React.js, Material-UI
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB with Mongoose
+- **Database**: MongoDB
 - **Authentication**: Passport.js
 - **Real-Time Communication**: WebRTC
 - **API Testing**: Hoppscotch
-- **Dev Tools**: VS Code, Git, Vite
-
 ---
 
 
