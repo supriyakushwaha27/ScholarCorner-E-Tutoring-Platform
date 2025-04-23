@@ -66,7 +66,7 @@ const TeacherHistory = () => {
           mb: 3,
           fontWeight: "bold",
           textAlign: "center",
-          color: "#032b63", // Professional blue heading
+          color: "#032b63", 
         }}
       >
         Meeting History
