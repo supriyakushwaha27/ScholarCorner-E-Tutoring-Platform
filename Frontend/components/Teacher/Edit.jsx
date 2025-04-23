@@ -40,11 +40,11 @@ export default function Edit() {
     pricing: "",
     experience: "",
     description: "",
-    profilePic: { url: "", filename: "" }, // Initialize profilePic as well
+    profilePic: { url: "", filename: "" }, 
   });
 
-  const [profilePicFile, setProfilePicFile] = useState(null); // State for profile pic file
-  const [loading, setLoading] = useState(true); // Loading state
+  const [profilePicFile, setProfilePicFile] = useState(null); 
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchTeacher = async () => {
@@ -56,7 +56,7 @@ export default function Edit() {
       } catch (error) {
         console.error("Error fetching teacher data:", error);
       } finally {
-        setLoading(false); // Set loading to false after fetch
+        setLoading(false); 
       }
     };
 
@@ -155,9 +155,9 @@ export default function Edit() {
     }
   };
 
-  // Show loading spinner or the form
+  
   if (loading) {
-    return <Typography>Loading...</Typography>; // Display loading message
+    return <Typography>Loading...</Typography>; 
   }
 
   return (
