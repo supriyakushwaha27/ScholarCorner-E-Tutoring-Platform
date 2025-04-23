@@ -64,4 +64,3 @@ export default function CreateMeeting() {
   );
 }
 
-//`${}` in backticks for dynamic strings in JavaScript.
