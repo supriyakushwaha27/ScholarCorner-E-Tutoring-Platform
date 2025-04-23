@@ -82,7 +82,7 @@ function Navbar() {
         color: "black",
         paddingY: 0.6,
         top: 0,
-        overflowX: "hidden", // Prevent horizontal overflow
+        overflowX: "hidden", 
       }}
     >
       <Container maxWidth="xl" sx={{ overflowX: "hidden" }}>
@@ -127,11 +127,11 @@ function Navbar() {
                     alt="User"
                     src={""}
                     sx={{
-                      bgcolor: "#032b63", // Set background color when there's no profile picture
-                      color: "#fff", // Text color for the character
+                      bgcolor: "#032b63", 
+                      color: "#fff", 
                     }}
                   >
-                    {/* Render the first letter of the username if no profile picture */}
+            
                     {user.username
                       ? user.username.charAt(0).toUpperCase()
                       : null}
