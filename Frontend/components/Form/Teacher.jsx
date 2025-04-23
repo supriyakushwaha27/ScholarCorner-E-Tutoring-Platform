@@ -74,7 +74,7 @@ export default function BeATeacher() {
     formData.append("experience", teacherFormData.experience);
     formData.append("certification", teacherFormData.certification);
 
-    // Append nested objects like education and availability manually
+    
     formData.append(
       "education[university]",
       teacherFormData.education.university
