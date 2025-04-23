@@ -61,13 +61,6 @@ app.use(
   })
 );
 
-// Debugging middleware to check session
-// app.use((req, res, next) => {
-//   console.log("Session ID:", req.sessionID);
-//   console.log("Session Cookies:", req.cookies);
-//   console.log("Session Data:", req.session);
-//   next();
-// });
 
 // Passport initialization
 app.use(passport.initialize());
@@ -77,6 +70,8 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+
 
 // Routes
 
@@ -310,9 +305,6 @@ app.delete("/user/:id/delete", async (req, res) => {
   }
 });
 
-// Teacher.insertMany(data).then((res)=>{
-//   console.log(res);
-// })
 
 //Boooking session
 app.post("/book-session", async (req, res) => {
@@ -682,41 +674,6 @@ app.get("/history/:userId", async (req, res) => {
 //payment
 
 // checkout api
-
-// app.post("/api/create-checkout-session", async (req, res) => {
-//   try {
-//     const { products } = req.body;
-
-//     const product = products[0];
-
-//     const lineItem = {
-//       price_data: {
-//         currency: product.currency,
-//         product_data: {
-//           name: product.name,
-//         },
-//         unit_amount: product.price * 100, // Convert to the smallest currency unit
-//       },
-//       quantity: 1, // Set to 1 for single booking
-//     };
-
-//     // Create a checkout session
-//     const session = await stripe.checkout.sessions.create({
-//       payment_method_types: ["card"],
-//       line_items: [lineItem], // Add the line item
-//       mode: "payment",
-//       success_url: "http://localhost:5173/login",
-//       cancel_url: "http://localhost:5173/signup",
-//     });
-
-//     // Respond with the session ID
-//     res.json({ id: session.id });
-//   } catch (error) {
-//     console.error("Error creating checkout session:", error);
-//     res.status(500).json({ error: "Failed to create checkout session" });
-//   }
-// });
-
 app.post("/api/create-checkout-session", async (req, res) => {
   try {
     const { products } = req.body;
