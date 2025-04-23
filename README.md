@@ -14,7 +14,7 @@
 - 🧑‍🎓 **Dedicated Dashboards** for Students and Teachers.
 - 💼 **Become a Tutor** – A portal for educators to register and manage their sessions.
 - 💳 **Payment Integration** for session confirmation.
-- 📲 **Responsive UI** designed with React, MUI, and Tailwind CSS.
+- 📲 **Responsive UI** designed with React and MUI
 
 ---
 
