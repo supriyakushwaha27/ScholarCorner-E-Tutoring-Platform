@@ -78,29 +78,6 @@ export default function Show() {
     }
   };
 
-  // Function to cancel the booking (replace this with your actual cancel logic)
-  const handleCancelBooking = async (bookingId) => {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/api/cancel/${bookingId}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (response.ok) {
-        toast.success("Meeting canceled and moved to history!");
-      } else {
-        const errorText = await response.text();
-        toast.error(`Failed to cancel booking: ${errorText}`);
-      }
-    } catch (error) {
-      toast.error("An error occurred while canceling the booking.");
-    }
-  };
 
   //history
   const [userBooking, setUserBooking] = useState({});
@@ -411,10 +388,10 @@ export default function Show() {
                     "confirmed" && (
                     <div
                       style={{
-                        display: "flex", // Flexbox for horizontal alignment
-                        alignItems: "center", // Center align items vertically
-                        gap: "1rem", // Space between elements
-                        marginTop: "0.6rem", // Add margin to the container
+                        display: "flex",
+                        alignItems: "center", 
+                        gap: "1rem", 
+                        marginTop: "0.6rem", 
                       }}
                     >
                       {/* Booking Approved Button */}
@@ -440,8 +417,8 @@ export default function Show() {
                       {!userBooking[teacher?.teacherId?._id]?.meetingCode && (
                         <p
                           style={{
-                            color: "#6c757d", // Neutral gray-blue for informational text
-                            fontSize: "14px", // Slightly smaller font for subtle emphasis
+                            color: "#6c757d", 
+                            fontSize: "14px", 
                           }}
                         >
                           You will soon receive a 'Join Meeting' button to join
@@ -720,7 +697,6 @@ export default function Show() {
             </>
           )}
 
-          {/* For webkit browsers */}
           <style>
             {`
             div::-webkit-scrollbar {
